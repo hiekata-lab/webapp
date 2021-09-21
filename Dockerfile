@@ -1,12 +1,16 @@
 FROM python:alpine
 # FROM python:3.6
-#ルートディレクトリ設定
+
+# Set Working Directory (application runs here.)
 WORKDIR /app
-COPY ./app /app
-RUN pip install Flask
+# Copy files in current directory
+ADD hello.py /app
+ADD requirements.txt /app
 
-#ファイルをappディレクトリに追加
-COPY hello.py /app/
+# install 
+RUN pip install -r requirements.txt
 
-#コマンド実行
-CMD ["python", "hello.py"]
+# open port 8000
+EXPOSE 8000
+# start flask server.
+CMD ["python", "/app/hello.py"]
