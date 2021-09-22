@@ -59,7 +59,6 @@ CMD ["python", "/app/hello.py"] line of Dockerfile
 will automatically run the server when you deploy
 this docker image into the container for operational use,
 not for development.
-
 -------------------------------------------
 (Container):/workspaces/webapp# cd /app
 (Container):/app# ls
@@ -77,8 +76,6 @@ hello.py          requirements.txt
  * Debugger is active!
  * Debugger PIN: 832-376-861
 -------------------------------------------
-
-
 Do followings to start forwarding 8000 port of your computer
 to 8000 port of running docker container.
 -------------------------------------------
@@ -96,10 +93,8 @@ Then check http://localhost:8000/app .
 You can start your docker image by typing following command in your computer.
 "webapp:latest" is the name specified when the docker image is build.
 (You need to understand more about docker and visual studio code.)
-
 "docker run --publish 8000:8000 --name webserver webapp:latest"
 -------------------------------------------
-
 
 開発が終了して、実行環境のためのイメージ作成は、Dockerfileを
 右クリックしてBuild Image から行う。イメージ作成時のタグは
