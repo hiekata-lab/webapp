@@ -3,10 +3,14 @@ FROM python:alpine
 
 # Set Working Directory (application runs here.)
 WORKDIR /app
+RUN mkdir /app/data
+RUN mkdir /app/templates
+
 # Copy files in current directory
-ADD hello.py /app
-ADD application.py /app
+ADD *.py /app
 ADD requirements.txt /app
+ADD templates/* /app/templates/
+ADD data/* /app/data/
 
 # install 
 RUN pip install -r requirements.txt

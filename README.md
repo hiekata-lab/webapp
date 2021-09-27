@@ -96,6 +96,13 @@ You can start your docker image by typing following command in your computer.
 "docker run --publish 8000:8000 --name webserver webapp:latest"
 -------------------------------------------
 
+Test the sample codes.
+-------------------------------------------
+1. Run "python /app/application.py"
+2. Connect http://localhost:5000/ from your computer(not from the docker)
+* Note that 5000 port is forwarded.
+-------------------------------------------
+
 開発が終了して、実行環境のためのイメージ作成は、Dockerfileを
 右クリックしてBuild Image から行う。イメージ作成時のタグは
 例えばwebapp:latestとする。このタグ名のイメージを実行するには
