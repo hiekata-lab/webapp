@@ -1,0 +1,39 @@
+<!doctype html>
+<title>Hello from Flask</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+jQuery(function(){
+//	jQuery.getJSON('/simulate?input1='+ document.form2.param1.value + '&input2='+ document.form2.param2.value, function(data) {
+	jQuery.getJSON('/json' , function(data) {
+		  	document.form1.json_text1.value = JSON.stringify(data);
+		});
+	});
+
+//Update data for form2
+function updateForm2() {
+jQuery(function(){
+	   jQuery.getJSON('/simulate?input1='+ document.form2.param1.value + '&input2='+ document.form2.param2.value, function(data) {
+		  	document.form2.output.value = JSON.stringify(data);
+		});
+	});
+}
+</script>
+  <h1>Calc and JSON</h1>
+	<br>
+	<p>How to Get JSON in an asynchronous manner</p>
+	<p>A JSON file (input.json) on the server will be loaded here</p>
+	
+	<form name="form1" >
+		<textarea name="json_text1" cols="100"></textarea>
+	</form>
+	<br>
+
+	<p>A JSON string is generated in OUTPUT1 from INPUT1 and INPUT2</p>
+	<form name="form2" action="javascript:updateForm2()">
+        INPUT1 for Simulator<input type="text"  name="param1" value="1"><br>
+        INPUT1 for Simulator<input type="text"  name="param2" value="2"><br>
+        OUTPUT1<input type="text"  name="output" value=""><br>
+        <input type="submit" value="add"><br>
+    </form>
+</html>

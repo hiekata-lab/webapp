@@ -1,0 +1,10 @@
+<!doctype html>
+<title>Hello from Flask</title>
+<p>This file is a sample to read parameters from python scripts.</p>
+{% if name %}
+  <h1>Hello {{ name }}!</h1>
+{% else %}
+  <h1>Hello, World!</h1>
+  Specify your name in the URL ( e.g.  /hello/Jack ) <br>
+{% endif %}
+</html>

@@ -5,12 +5,15 @@ FROM python:alpine
 WORKDIR /app
 # Copy files in current directory
 ADD hello.py /app
+ADD application.py /app
 ADD requirements.txt /app
 
 # install 
 RUN pip install -r requirements.txt
 
-# open port 8000
+# open port 8000 and 5000
 EXPOSE 8000
+EXPOSE 5000
 # start flask server.
 CMD ["python", "/app/hello.py"]
+# CMD ["python", "/app/application.py"]
