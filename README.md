@@ -112,3 +112,8 @@ Dockerイメージを起動できた後、以下のアドレスでウェブア�
 http://localhost:8000/app
 このイメージをAzure等にコピーしていれば、ウェブ上で動く
 アプリケーションとして動かすことができる。
+
+TODO
+
+I should have included a simple graph by dash. 
+https://dash.plotly.com/dash-core-components/graph
