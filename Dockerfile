@@ -1,6 +1,9 @@
 FROM python:alpine
 # FROM python:3.6
 
+# Install Git
+RUN apk --no-cache add git
+
 # Set Working Directory (application runs here.)
 WORKDIR /app
 RUN mkdir /app/data
