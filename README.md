@@ -49,17 +49,15 @@ http://localhost:8000/app/hello
 このイメージをAzure等にコピーしていれば、ウェブ上で動く
 アプリケーションとして動かすことができる。
 
+### Dockerfile
+CMD ["python", "/app/hello.py"] line of Dockerfile
+will automatically run the server when you deploy
+this docker image into the container for operational use, not for development.
 
-(old notes)
-
+### Notes
 Type following commands to start Flask server 
 in Running Docker Container with Docker Image.
 
-CMD ["python", "/app/hello.py"] line of Dockerfile
-will automatically run the server when you deploy
-this docker image into the container for operational use,
-not for development.
--------------------------------------------
 (Container):/workspaces/webapp# cd /app
 (Container):/app# ls
 hello.py          requirements.txt
@@ -76,8 +74,7 @@ hello.py          requirements.txt
  * Debugger is active!
  * Debugger PIN: 832-376-861
 -------------------------------------------
-Do followings to start forwarding 8000 port of your computer
-to 8000 port of running docker container.
+Do followings to start forwarding 8000 port of your computer to 8000 port of running docker container.
 -------------------------------------------
 1. visual studio code and docker may configure the forwarding automatically.
 Access http://localhost:8000/app from your computer(not from the docker)
@@ -96,7 +93,7 @@ You can start your docker image by typing following command in your computer.
 "docker run --publish 8000:8000 --name webserver webapp:latest"
 -------------------------------------------
 
-Test the sample codes.
+### Advanced Samples
 -------------------------------------------
 1. Run "python /app/application.py"
 2. Connect http://localhost:5000/ from your computer(not from the docker)
@@ -113,8 +110,7 @@ http://localhost:8000/app
 このイメージをAzure等にコピーしていれば、ウェブ上で動く
 アプリケーションとして動かすことができる。
 
-TODO
+### TODO
 
 I should have included a simple graph by dash. 
 https://dash.plotly.com/dash-core-components/graph
-
