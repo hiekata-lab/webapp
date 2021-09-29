@@ -8,6 +8,7 @@ def hello():
 @app.route("/json")
 def jsonreturn():
     # read JSON file and send them to the web client
+    # See templates/calc.html to know how you call this
     with open("./data/input.json", 'r') as f:
         json_data = json.load(f)
     json_str = json.dumps(json_data)
@@ -16,20 +17,21 @@ def jsonreturn():
 @app.route('/hello')
 @app.route('/hello/<name>')
 def hello2(name=None):
-# /hello will reply basic html
-# /hello/<name> will reply with username specified in <name>
+    # /hello will reply basic html
+    # /hello/<name> will reply with username specified in <name>
     return render_template('hello.html', name=name)
 
 @app.route('/ui')
 def ui():
-# /ui will reply basic html
-# /ui/<name> will reply with username specified in <name>
+    # /ui will reply basic html
+    # /ui/<name> will reply with username specified in <name>
     return render_template('calc.html')
 
 @app.route('/simulate')
 def simulate():
-# This function read two parameters from web request
-# Returns the sum of two parameters.
+    # This function read two parameters from web request
+    # Returns the sum of two parameters.
+    # See templates/calc.html to know how you call this
     param1 = request.args.get('input1')
     param2 = request.args.get('input2')
     # replace the next line with your simulator
