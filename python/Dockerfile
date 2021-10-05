@@ -18,9 +18,9 @@ ADD data/* /app/data/
 # install 
 RUN pip install -r requirements.txt
 
-# open port 8000 and 5000
-EXPOSE 8000
+# open port 5000
+#EXPOSE 8000
 EXPOSE 5000
 # start flask server.
-CMD ["python", "/app/hello.py"]
-# CMD ["python", "/app/application.py"]
+#CMD ["python", "/app/hello.py"]
+CMD ["python", "/app/application.py"]
