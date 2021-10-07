@@ -19,7 +19,7 @@ Installation
     ```
 2. Build the docker container with the `Dockerfile` (don't forget to run docker on the background)
     ```
-    cd ~/your_localFile/webapp
+    cd ~/your_localFile/webapp/python
     docker build -t webapp:1.0 .
     ```
 2. Run the container previously created
@@ -39,15 +39,35 @@ python /app/hello.py と入力してアプリケーションを起動するこ�
 起動した後は以下のアドレスでウェブアプリにアクセスできる。
 http://localhost:8000/app/hello
 
+Run "docker run --publish 8000:8000 --name webserver webapp:latest"
+then, access http://localhost:8000/app/hello.
+When you are developing in a VS Code remote container, the following line in the Dockerfile will not be executed.
+in the Dockerfile will not be executed.
+CMD ["python", "/app/hello.py"].
+To test the web app you are developing, start a Docker terminal and run
+Type python /app/hello.py to launch the application.
+After launching, you can access the web app at the following address.
+http://localhost:8000/app/hello
+
+### Follow Up
 開発が終了して、実行環境のためのイメージ作成は、Dockerfileを
 右クリックしてBuild Image から行う。イメージ作成時のタグは
 例えばwebapp:latestとする。このタグ名のイメージを実行するには
 イメージ作成後にWindowsやMac側で以下のコマンドを実行する。
 "docker run --publish 8000:8000 --name webserver webapp:latest"
 Dockerイメージを起動できた後、以下のアドレスでウェブアプリにアクセスできる。
-http://localhost:8000/app/hello
+http://localhost:8000/
 このイメージをAzure等にコピーしていれば、ウェブ上で動く
 アプリケーションとして動かすことができる。
+
+When you have finished development, you can create an image for the execution environment by right-clicking on the Dockerfile
+Right click on the Dockerfile and select Build Image. The tag for creating the image is
+For example, webapp:latest. To run an image with this tag name
+After creating the image, run the following command on Windows or Mac
+"docker run --publish 8000:8000 --name webserver webapp:latest"
+After you are able to run the Docker image, you can access the web app at the following address:
+http://localhost:8000/
+If you have copied this image to Azure, you can run it as a web application.
 
 ### Dockerfile
 CMD ["python", "/app/hello.py"] line of Dockerfile
