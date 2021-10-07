@@ -1,5 +1,6 @@
-FROM java:8  
-COPY . /var/www/java  
-WORKDIR /var/www/java  
-RUN javac Hello.java  
-CMD ["java", "Hello"]
+FROM java
+WORKDIR /app
+ADD HelloHTTP.java /app
+RUN javac HelloHTTP.java -d .
+EXPOSE 8000
+CMD ["java", "HelloHTTP"]
