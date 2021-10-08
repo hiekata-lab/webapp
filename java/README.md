@@ -49,8 +49,6 @@ After you are able to run the Docker image, you can access the web app at the fo
 http://localhost:8000/
 If you have copied this image to Azure, you can run it as a web application.
 
-Translated with www.DeepL.com/Translator (free version)
-
 ### Dockerfile
 CMD ["java", "HelloHTTP"] line of Dockerfile
 will automatically run the server when you deploy
