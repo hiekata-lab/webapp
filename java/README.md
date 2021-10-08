@@ -26,7 +26,7 @@ Installation
     ```
     docker container run --name webserver -d -p 8000:8000 webapp:1.0
     ```
-2. go to http://localhost:8000/app on your browser, if you see a message is working
+2. go to http://localhost:8000/ on your browser, if you see a message is working
 
 ### Follow Up (日本語）
 開発が終了して、実行環境のためのイメージ作成は、Dockerfileを
