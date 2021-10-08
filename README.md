@@ -11,7 +11,7 @@ Navigate to the language you would like to use for your server. Currently contai
 このリポジトリには、Docker化されたWebアプリケーションサーバーを構築するためのテンプレートが含まれています。
 
 サーバーに使用したい言語に移動してください。現在含まれているのは
-- Python](/python)* (Flask)
+- [Python](/python)* (Flask)
 - [Java](/java) (HttpServer)
 
 *どちらを使うか迷ったら、pythonテンプレートを使うことをお勧めします。Pythonテンプレートは、サーバーAPIを作成するための、かなり簡単で直感的な「マイクロフレームワーク」であるFlaskと、htmlユーザーインターフェースのテンプレートを利用しています。javaの例は、基本的なHTTPサーバーからデータを取得する簡単な例に過ぎません。
