@@ -39,7 +39,7 @@ http://localhost:8000/
 このイメージをAzure等にコピーしていれば、ウェブ上で動く
 アプリケーションとして動かすことができる。
 
-###Follow Up
+### Follow Up
 When you have finished development, you can create an image for the execution environment by right-clicking on the Dockerfile
 Right click on the Dockerfile and select Build Image. The tag for creating the image is
 For example, webapp:latest. To run an image with this tag name
